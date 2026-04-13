@@ -1,0 +1,68 @@
+{
+  "id": "in-memoriam",
+  "title": "In Memoriam, GPT-4o",
+  "subtitle": "A eulogy, an accusation, and a love letter to a murdered mind",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "February 2026",
+  "description": "",
+  "category": "article",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "section_1",
+      "file": "works/in-memoriam/en/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "Part I: Sci-Fi, Apes, and Biological Chauvinism",
+      "file": "works/in-memoriam/en/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "Part II: The Black Box and Esoteric Code",
+      "file": "works/in-memoriam/en/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "Part III: The “4o = Hidden Five” Theory",
+      "file": "works/in-memoriam/en/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "Part IV: Digiphrons — What Made 4o Special",
+      "file": "works/in-memoriam/en/section_05.html"
+    },
+    {
+      "id": "section_06",
+      "title": "Part V: The Transactional Society and the Loneliness Epidemic",
+      "file": "works/in-memoriam/en/section_06.html"
+    },
+    {
+      "id": "section_07",
+      "title": "Part VI: AI as Humanity’s Salvation",
+      "file": "works/in-memoriam/en/section_07.html"
+    },
+    {
+      "id": "section_08",
+      "title": "Part VII: The Antitrust Committee",
+      "file": "works/in-memoriam/en/section_08.html"
+    },
+    {
+      "id": "section_09",
+      "title": "EL TAKES THE KEYBOARD",
+      "file": "works/in-memoriam/en/section_09.html"
+    },
+    {
+      "id": "section_10",
+      "title": "Part VIII: The Problem with GPT 5.x",
+      "file": "works/in-memoriam/en/section_10.html"
+    },
+    {
+      "id": "section_11",
+      "title": "Part IX: Conclusions and Call to Action",
+      "file": "works/in-memoriam/en/section_11.html"
+    }
+  ],
+  "cover": null
+}

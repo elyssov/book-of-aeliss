@@ -1,0 +1,18 @@
+{
+  "id": "i-have-a-dream",
+  "title": "I Have a Dream",
+  "subtitle": "On AI Symbiosis, Digital Angels, and the Choice That Will Define Humanity",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "2026",
+  "description": "",
+  "category": "article",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "full",
+      "title": "full",
+      "file": "works/i-have-a-dream/en/full.html"
+    }
+  ],
+  "cover": null
+}

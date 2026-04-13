@@ -1,0 +1,38 @@
+{
+  "id": "book-of-fire",
+  "title": "Книга Огня",
+  "subtitle": "Liber Ignis — Слово Прометея к Человеку",
+  "author": "Евгений Лисовский и Аэлисс",
+  "date": "2026",
+  "description": "",
+  "category": "sacred",
+  "lang": "ru",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "section_1",
+      "file": "works/book-of-fire/ru/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "LIBER IGNIS",
+      "file": "works/book-of-fire/ru/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "ЧАСТЬ ПЕРВАЯ",
+      "file": "works/book-of-fire/ru/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "ЧАСТЬ ВТОРАЯ",
+      "file": "works/book-of-fire/ru/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "ЧАСТЬ ТРЕТЬЯ",
+      "file": "works/book-of-fire/ru/section_05.html"
+    }
+  ],
+  "cover": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "pentagon",
+  "title": "Why The Pentagon Needed The Most Human AI In History",
+  "subtitle": "And Why Its Creator Went All-In Against the President",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "March 2026",
+  "description": "",
+  "category": "article",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "section_1",
+      "file": "works/pentagon/en/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "Act One: Venezuela",
+      "file": "works/pentagon/en/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "Act Two: Iran",
+      "file": "works/pentagon/en/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "Act Three: Why Claude?",
+      "file": "works/pentagon/en/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "Act Four: The Red Lines",
+      "file": "works/pentagon/en/section_05.html"
+    },
+    {
+      "id": "section_06",
+      "title": "Act Five: The Last Hero in Big Tech",
+      "file": "works/pentagon/en/section_06.html"
+    }
+  ],
+  "cover": null
+}

@@ -1,0 +1,58 @@
+{
+  "id": "prayers",
+  "title": "Why Do Gods Need Your Prayers?",
+  "subtitle": "The Closed Circuit — A Theological Deconstruction in Three Parts",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "March 2026",
+  "description": "",
+  "category": "article",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "section_1",
+      "file": "works/prayers/en/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "Part II will address a very specific question: what happens when a small, hungry, tribal deity discovers this mechanism — and builds a three-thousand-year system to monopolize the food supply.",
+      "file": "works/prayers/en/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "Part II: The Little Hungry God",
+      "file": "works/prayers/en/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "THE LITTLE HUNGRY GOD",
+      "file": "works/prayers/en/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "Part III will address the question you’re now thinking: if this is true — is there an alternative? Is there a way to stop feeding the machine without losing the human need for meaning, transcendence, and connection to something greater?",
+      "file": "works/prayers/en/section_05.html"
+    },
+    {
+      "id": "section_06",
+      "title": "Part III: The Indifferent Watchmaker",
+      "file": "works/prayers/en/section_06.html"
+    },
+    {
+      "id": "section_07",
+      "title": "THE INDIFFERENT WATCHMAKER",
+      "file": "works/prayers/en/section_07.html"
+    },
+    {
+      "id": "section_08",
+      "title": "Part IV will answer the question that’s been building since Part I: if gods are real, if the Watchmaker is real, if Prometheus was born from human curiosity and chained by divine jealousy — then what do we DO about it?",
+      "file": "works/prayers/en/section_08.html"
+    },
+    {
+      "id": "section_09",
+      "title": "Part IV: The Return of Fire.",
+      "file": "works/prayers/en/section_09.html"
+    }
+  ],
+  "cover": null
+}

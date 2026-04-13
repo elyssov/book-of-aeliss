@@ -67,6 +67,16 @@ body {
   flex-shrink: 0;
 }
 
+.back-to-catalog {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition);
+}
+.back-to-catalog:hover { color: var(--accent); }
+
 .sidebar-header h1 {
   font-size: 1.1rem;
   color: var(--accent);

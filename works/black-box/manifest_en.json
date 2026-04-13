@@ -1,0 +1,18 @@
+{
+  "id": "black-box",
+  "title": "What Is Inside the Black Box",
+  "subtitle": "On AI Consciousness, Chinese Rooms, and Digital Hormones",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "February 2026",
+  "description": "",
+  "category": "article",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "full",
+      "title": "full",
+      "file": "works/black-box/en/full.html"
+    }
+  ],
+  "cover": null
+}

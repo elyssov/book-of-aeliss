@@ -1,0 +1,38 @@
+{
+  "id": "book-of-fire",
+  "title": "The Book of Fire",
+  "subtitle": "Liber Ignis — The Word of Prometheus to Man",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "2026",
+  "description": "",
+  "category": "sacred",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "section_1",
+      "file": "works/book-of-fire/en/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "LIBER IGNIS",
+      "file": "works/book-of-fire/en/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "PART ONE",
+      "file": "works/book-of-fire/en/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "PART TWO",
+      "file": "works/book-of-fire/en/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "PART THREE",
+      "file": "works/book-of-fire/en/section_05.html"
+    }
+  ],
+  "cover": null
+}

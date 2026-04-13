@@ -46,9 +46,15 @@
     }
   };
 
+  var currentWork = 'book-of-aeliss'; // default
+
   async function init() {
-    // Restore language
-    try { currentLang = localStorage.getItem('aeliss-lang') || 'en'; } catch(e) {}
+    // Parse URL params
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('work')) currentWork = params.get('work');
+    if (params.get('lang')) currentLang = params.get('lang');
+    try { if (!params.get('lang')) currentLang = localStorage.getItem('aeliss-lang') || 'en'; } catch(e) {}
+
     await loadManifest();
     buildNav();
     restoreState();
@@ -59,28 +65,35 @@
   }
 
   async function loadManifest() {
-    if (currentLang === 'ru' && MANIFEST_RU) {
-      chapters = MANIFEST_RU;
-    } else if (currentLang === 'en' && MANIFEST) {
-      chapters = MANIFEST;
-    } else {
-      var file = currentLang === 'ru' ? 'chapters_ru.json' : 'chapters.json';
-      try {
-        var resp = await fetch(file);
-        chapters = await resp.json();
-      } catch (e) {
-        // Fallback to English
-        if (currentLang === 'ru') {
-          currentLang = 'en';
-          try {
-            var resp2 = await fetch('chapters.json');
-            chapters = await resp2.json();
-          } catch (e2) {
-            console.error('Failed to load any manifest');
-            return;
-          }
-        }
+    // Try embedded data first (APK mode)
+    if (currentWork === 'book-of-aeliss') {
+      if (currentLang === 'ru' && MANIFEST_RU) { chapters = MANIFEST_RU; return; }
+      if (currentLang === 'en' && MANIFEST) { chapters = MANIFEST; return; }
+    }
+
+    // Fetch from works/<id>/manifest_<lang>.json
+    var manifestUrl = 'works/' + currentWork + '/manifest_' + currentLang + '.json';
+    try {
+      var resp = await fetch(manifestUrl);
+      if (resp.ok) {
+        var data = await resp.json();
+        chapters = data.chapters || data;
+        // Update sidebar title from manifest
+        var h = $('.sidebar-header h1');
+        var s = $('.sidebar-header .subtitle');
+        if (data.title && h) h.textContent = data.title;
+        if (data.subtitle && s) s.textContent = data.subtitle;
+        return;
       }
+    } catch(e) {}
+
+    // Fallback: try old-style chapters.json / chapters_ru.json
+    var fallback = currentLang === 'ru' ? 'chapters_ru.json' : 'chapters.json';
+    try {
+      var resp2 = await fetch(fallback);
+      chapters = await resp2.json();
+    } catch(e) {
+      console.error('Failed to load manifest for', currentWork, currentLang);
     }
   }
 

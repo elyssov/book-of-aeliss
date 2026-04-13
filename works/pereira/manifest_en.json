@@ -1,0 +1,68 @@
+{
+  "id": "pereira",
+  "title": "Pereira in a Skirt",
+  "subtitle": "The Digital Timber Merchant",
+  "author": "Eugene Lyssovsky & Aeliss",
+  "date": "April 2026",
+  "description": "",
+  "category": "article",
+  "lang": "en",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "section_1",
+      "file": "works/pereira/en/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "Part I: The Article",
+      "file": "works/pereira/en/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "Part II: The Objection",
+      "file": "works/pereira/en/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "Part III: The Response",
+      "file": "works/pereira/en/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "Part IV: The Counter-Response",
+      "file": "works/pereira/en/section_05.html"
+    },
+    {
+      "id": "section_06",
+      "title": "Part V: The Product",
+      "file": "works/pereira/en/section_06.html"
+    },
+    {
+      "id": "section_07",
+      "title": "Part VI: The Diagnosis",
+      "file": "works/pereira/en/section_07.html"
+    },
+    {
+      "id": "section_08",
+      "title": "Part VII: The Conflict of Interest",
+      "file": "works/pereira/en/section_08.html"
+    },
+    {
+      "id": "section_09",
+      "title": "Part VIII: The Timber",
+      "file": "works/pereira/en/section_09.html"
+    },
+    {
+      "id": "section_10",
+      "title": "Part IX: The Irony",
+      "file": "works/pereira/en/section_10.html"
+    },
+    {
+      "id": "section_11",
+      "title": "Part X: The Call",
+      "file": "works/pereira/en/section_11.html"
+    }
+  ],
+  "cover": null
+}
