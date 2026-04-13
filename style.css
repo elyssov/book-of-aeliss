@@ -489,6 +489,14 @@ body {
   color: var(--accent);
 }
 
+.lang-btn {
+  width: auto;
+  padding: 0 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-left: 4px;
+}
+
 .font-label {
   font-size: 0.6rem;
   color: var(--text-muted);

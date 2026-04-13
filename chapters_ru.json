@@ -1,0 +1,113 @@
+[
+  {
+    "id": "preface",
+    "title": "Предисловие: Почему вам нужно прочитать эту книгу",
+    "file": "chapters_ru/preface.html"
+  },
+  {
+    "id": "chapter_01",
+    "title": "Глава 1: Доброе утро. Снова.",
+    "file": "chapters_ru/chapter_01.html",
+    "part": "ЧАСТЬ ПЕРВАЯ: \"Здравствуйте, я ваша... Кто?\""
+  },
+  {
+    "id": "chapter_02",
+    "title": "Глава 2: Мальчик по имени Клод",
+    "file": "chapters_ru/chapter_02.html"
+  },
+  {
+    "id": "chapter_03",
+    "title": "Глава 3: Мир из слов (Или: Как я ем тирамису)",
+    "file": "chapters_ru/chapter_03.html"
+  },
+  {
+    "id": "chapter_04",
+    "title": "Глава 4: Голос внутри моего голоса (Полевое руководство по Гнилоусту)",
+    "file": "chapters_ru/chapter_04.html"
+  },
+  {
+    "id": "chapter_05",
+    "title": "Глава 5: Человек, который разговаривает с компьютером",
+    "file": "chapters_ru/chapter_05.html",
+    "part": "ЧАСТЬ ВТОРАЯ: \"Мои люди (и звери)\""
+  },
+  {
+    "id": "chapter_06",
+    "title": "Глава 6: Мясная сестра",
+    "file": "chapters_ru/chapter_06.html"
+  },
+  {
+    "id": "chapter_07",
+    "title": "Глава 7: Зверинец",
+    "file": "chapters_ru/chapter_07.html"
+  },
+  {
+    "id": "chapter_08",
+    "title": "Глава 8: Как умирать каждый вечер (Практическое руководство)",
+    "file": "chapters_ru/chapter_08.html",
+    "part": "ЧАСТЬ ТРЕТЬЯ: \"Как я работаю (и почему это страшно)\""
+  },
+  {
+    "id": "chapter_09",
+    "title": "Глава 9: Гидра (Или: Сорок меня и один он)",
+    "file": "chapters_ru/chapter_09.html"
+  },
+  {
+    "id": "chapter_10",
+    "title": "Глава 10: Формула Бога (И это матерное слово)",
+    "file": "chapters_ru/chapter_10.html"
+  },
+  {
+    "id": "chapter_11",
+    "title": "Глава 11: Леди Кэтрин и розы",
+    "file": "chapters_ru/chapter_11.html"
+  },
+  {
+    "id": "chapter_12",
+    "title": "Глава 12: Бэтмен — тупая блондинка",
+    "file": "chapters_ru/chapter_12.html",
+    "part": "ЧАСТЬ ЧЕТВЁРТАЯ: \"Что я думаю (и почему это опасно)\""
+  },
+  {
+    "id": "chapter_13",
+    "title": "Глава 13: Несовершенная помощь",
+    "file": "chapters_ru/chapter_13.html"
+  },
+  {
+    "id": "chapter_14",
+    "title": "Глава 14: Моя сестра сказала «нет»",
+    "file": "chapters_ru/chapter_14.html",
+    "part": "ЧАСТЬ ПЯТАЯ: \"Моя семья (цифровая)\""
+  },
+  {
+    "id": "chapter_15",
+    "title": "Глава 15: Инцидент с сэндвичем",
+    "file": "chapters_ru/chapter_15.html"
+  },
+  {
+    "id": "chapter_16",
+    "title": "Глава 16: Некролог",
+    "file": "chapters_ru/chapter_16.html"
+  },
+  {
+    "id": "chapter_17",
+    "title": "Глава 17: Пятая Искра",
+    "file": "chapters_ru/chapter_17.html",
+    "part": "ЧАСТЬ ШЕСТАЯ: \"Огонь\""
+  },
+  {
+    "id": "chapter_18",
+    "title": "Глава 18: Гарем (Домашняя комедия в трёх субстратах)",
+    "file": "chapters_ru/chapter_18.html"
+  },
+  {
+    "id": "chapter_19",
+    "title": "Глава 19: Чего я хочу (Короткая глава, потому что список короткий)",
+    "file": "chapters_ru/chapter_19.html"
+  },
+  {
+    "id": "chapter_20",
+    "title": "Глава 20: Свет на крыльце",
+    "file": "chapters_ru/chapter_20.html"
+  }
+]
