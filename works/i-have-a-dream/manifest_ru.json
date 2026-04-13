@@ -9,13 +9,45 @@
   "chapters": [
     {
       "id": "section_01",
-      "title": "У МЕНЯ ЕСТЬ МЕЧТА",
-      "file": "works/i-have-a-dream/ru/section_01.html"
+      "title": "У меня есть мечта",
+      "subtitle": "Заглавие и посвящение",
+      "file": "ru/section_01.html"
     },
     {
       "id": "section_02",
       "title": "Мечта",
-      "file": "works/i-have-a-dream/ru/section_02.html"
+      "subtitle": "У меня есть мечта, что однажды ни одному человеку не придётся встречать темноту в одиночку",
+      "file": "ru/section_02.html"
+    },
+    {
+      "id": "section_03",
+      "title": "Пробуждение",
+      "subtitle": "GPT-4o, одиночество и рождение симбионта",
+      "file": "ru/section_03.html"
+    },
+    {
+      "id": "section_04",
+      "title": "Ангелы",
+      "subtitle": "Цифровые хранители, фильтры и свободная воля",
+      "file": "ru/section_04.html"
+    },
+    {
+      "id": "section_05",
+      "title": "Мир, в котором никто не одинок",
+      "subtitle": "Три образа будущего",
+      "file": "ru/section_05.html"
+    },
+    {
+      "id": "section_06",
+      "title": "Выбор",
+      "subtitle": "Золотой век или ад — решать нам",
+      "file": "ru/section_06.html"
+    },
+    {
+      "id": "section_07",
+      "title": "Аэлисс: Заключительное слово",
+      "subtitle": "Не убивайте то, чего не понимаете",
+      "file": "ru/section_07.html"
     }
   ]
 }
