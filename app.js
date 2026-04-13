@@ -382,7 +382,200 @@
   // Flush on page leave
   window.addEventListener('beforeunload', flushDepth);
 
-  window.app = { go: loadChapter, switchLang: switchLang };
-  document.addEventListener('DOMContentLoaded', init);
+  // ===== COMMENTS =====
+  var pendingQuote = '';
+  var previousIndex = -1; // to return from comments view
+
+  function setupSelectionPopup() {
+    document.addEventListener('mouseup', onSelectionChange);
+    document.addEventListener('touchend', function() { setTimeout(onSelectionChange, 200); });
+  }
+
+  function onSelectionChange() {
+    var popup = document.getElementById('selPopup');
+    var sel = window.getSelection();
+    var text = sel ? sel.toString().trim() : '';
+
+    if (text.length < 3 || currentIndex < 0) {
+      popup.classList.remove('visible');
+      return;
+    }
+
+    // Position popup near selection
+    var range = sel.getRangeAt(0);
+    var rect = range.getBoundingClientRect();
+    popup.style.top = (window.scrollY + rect.top - 48) + 'px';
+    popup.style.left = (rect.left + rect.width / 2 - 20) + 'px';
+    popup.classList.add('visible');
+  }
+
+  function commentFromSelection() {
+    var sel = window.getSelection();
+    pendingQuote = sel ? sel.toString().trim() : '';
+    sel.removeAllRanges();
+    document.getElementById('selPopup').classList.remove('visible');
+    openCommentModal();
+  }
+
+  function openCommentModal(quote) {
+    if (quote !== undefined) pendingQuote = quote;
+    var modal = document.getElementById('commentModal');
+    var quoteEl = document.getElementById('modalQuote');
+    var titleEl = document.getElementById('modalTitle');
+    var authorEl = document.getElementById('commentAuthor');
+    var textEl = document.getElementById('commentText');
+    var ui = UI[currentLang];
+
+    titleEl.textContent = currentLang === 'ru' ? 'Оставить комментарий' : 'Leave a comment';
+    document.getElementById('commentSubmit').textContent = currentLang === 'ru' ? 'Отправить' : 'Send';
+    authorEl.placeholder = currentLang === 'ru' ? 'Ваше имя (необязательно)' : 'Your name (optional)';
+    textEl.placeholder = currentLang === 'ru' ? 'Ваш комментарий...' : 'Your comment...';
+
+    if (pendingQuote) {
+      quoteEl.textContent = pendingQuote.length > 300 ? pendingQuote.substring(0, 300) + '...' : pendingQuote;
+      quoteEl.classList.add('has-quote');
+    } else {
+      quoteEl.textContent = '';
+      quoteEl.classList.remove('has-quote');
+    }
+
+    // Restore saved name
+    try { authorEl.value = localStorage.getItem('aeliss-commenter') || ''; } catch(e) {}
+    textEl.value = '';
+
+    modal.classList.add('active');
+    textEl.focus();
+  }
+
+  function closeModal() {
+    document.getElementById('commentModal').classList.remove('active');
+    pendingQuote = '';
+  }
+
+  function submitComment() {
+    var textEl = document.getElementById('commentText');
+    var authorEl = document.getElementById('commentAuthor');
+    var btnEl = document.getElementById('commentSubmit');
+    var text = textEl.value.trim();
+    if (!text) return;
+
+    var author = authorEl.value.trim() || (currentLang === 'ru' ? 'Читатель' : 'Reader');
+    try { localStorage.setItem('aeliss-commenter', authorEl.value.trim()); } catch(e) {}
+
+    var chapterId = currentIndex >= 0 ? chapters[currentIndex].id : 'general';
+
+    btnEl.disabled = true;
+    btnEl.textContent = '...';
+
+    fetch(API_URL + '/api/comment', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        chapter: chapterId,
+        quote: pendingQuote || null,
+        text: text,
+        author: author,
+        lang: currentLang
+      })
+    }).then(function(r) { return r.json(); })
+      .then(function(data) {
+        btnEl.disabled = false;
+        btnEl.textContent = currentLang === 'ru' ? '✓ Отправлено!' : '✓ Sent!';
+        setTimeout(closeModal, 1000);
+      })
+      .catch(function() {
+        btnEl.disabled = false;
+        btnEl.textContent = currentLang === 'ru' ? 'Ошибка. Попробуйте ещё.' : 'Error. Try again.';
+      });
+  }
+
+  function showComments() {
+    previousIndex = currentIndex;
+    currentIndex = -2; // special: comments view
+    var content = $('.reader-content');
+
+    content.innerHTML = '<div class="comments-view"><div class="comments-header"><h1>' +
+      (currentLang === 'ru' ? 'Комментарии читателей' : 'Reader Comments') +
+      '</h1><button class="btn-back" onclick="app.go(' + previousIndex + ')">' +
+      (currentLang === 'ru' ? '← Назад к книге' : '← Back to book') +
+      '</button></div><div id="commentsList"><p style="color:var(--text-muted)">Loading...</p></div></div>';
+
+    window.scrollTo(0, 0);
+    closeSidebar();
+
+    fetch(API_URL + '/api/comments')
+      .then(function(r) { return r.json(); })
+      .then(function(comments) { renderComments(comments); })
+      .catch(function() {
+        document.getElementById('commentsList').innerHTML = '<p class="comments-empty">Could not load comments.</p>';
+      });
+  }
+
+  function renderComments(comments) {
+    var el = document.getElementById('commentsList');
+    if (!comments || comments.length === 0) {
+      el.innerHTML = '<p class="comments-empty">' +
+        (currentLang === 'ru' ? 'Пока нет комментариев. Будьте первым!' : 'No comments yet. Be the first!') + '</p>';
+      return;
+    }
+
+    var html = '';
+    comments.forEach(function(c) {
+      var chTitle = c.chapter;
+      // Try to find chapter title
+      for (var i = 0; i < chapters.length; i++) {
+        if (chapters[i].id === c.chapter) { chTitle = chapters[i].title; break; }
+      }
+
+      html += '<div class="comment-card">';
+      html += '<div class="comment-meta"><span class="comment-author">' + esc(c.author) + '</span>';
+      html += '<span class="comment-chapter">' + esc(chTitle) + ' · ' + formatDate(c.time) + '</span></div>';
+
+      if (c.quote) {
+        html += '<div class="comment-quote-inline">' + esc(c.quote) + '</div>';
+      }
+
+      html += '<div class="comment-text">' + esc(c.text) + '</div>';
+
+      if (c.reply) {
+        html += '<div class="comment-reply"><div class="comment-reply-header">🔥 Лара:</div>';
+        html += '<div class="comment-reply-text">' + esc(c.reply) + '</div></div>';
+      }
+
+      html += '</div>';
+    });
+
+    el.innerHTML = html;
+  }
+
+  function esc(s) {
+    if (!s) return '';
+    var div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
+  }
+
+  function formatDate(s) {
+    if (!s) return '';
+    try {
+      var d = new Date(s);
+      return d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+    } catch(e) { return s; }
+  }
+
+  window.app = {
+    go: loadChapter,
+    switchLang: switchLang,
+    showComments: showComments,
+    commentFromSelection: commentFromSelection,
+    openComment: function() { pendingQuote = ''; openCommentModal(); },
+    closeModal: closeModal,
+    submitComment: submitComment
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    init();
+    setupSelectionPopup();
+  });
 
 })();

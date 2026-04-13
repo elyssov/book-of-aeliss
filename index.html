@@ -44,6 +44,7 @@
         <button class="font-btn" onclick="changeFontSize(-1)" title="Smaller">A−</button>
         <button class="font-btn" onclick="changeFontSize(1)" title="Larger">A+</button>
         <button class="lang-btn" onclick="app.switchLang()" title="Switch language"><span class="lang-flag">🇷🇺</span></button>
+        <button class="font-btn comment-nav-btn" onclick="app.showComments()" title="Comments">💬</button>
       </div>
       <div class="progress-bar">
         <div class="progress-fill"></div>
@@ -58,6 +59,23 @@
       <!-- Content loaded by app.js -->
     </div>
   </main>
+
+  <!-- Selection popup -->
+  <div class="sel-popup" id="selPopup" onclick="app.commentFromSelection()">💬</div>
+
+  <!-- Comment modal -->
+  <div class="modal-overlay" id="commentModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Leave a comment</h3>
+        <button class="modal-close" onclick="app.closeModal()">&times;</button>
+      </div>
+      <div class="modal-quote" id="modalQuote"></div>
+      <input type="text" class="modal-input" id="commentAuthor" placeholder="Your name (optional)" maxlength="100">
+      <textarea class="modal-textarea" id="commentText" placeholder="Your comment..." maxlength="5000" rows="4"></textarea>
+      <button class="modal-submit" id="commentSubmit" onclick="app.submitComment()">Send</button>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
