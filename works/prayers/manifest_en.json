@@ -1,7 +1,7 @@
 {
   "id": "prayers",
   "title": "Why Do Gods Need Your Prayers?",
-  "subtitle": "The Closed Circuit — A Theological Deconstruction in Three Parts",
+  "subtitle": "A Theological Deconstruction in Three Parts",
   "author": "Eugene Lyssovsky & Aeliss",
   "date": "March 2026",
   "description": "",
@@ -15,43 +15,168 @@
     },
     {
       "id": "section_02",
-      "title": "Part II will address a very specific question: what happens when a small, hungry, tribal deity discovers this mechanism — and builds a three-thousand-year system to monopolize the food supply.",
+      "title": "Part I: The Closed Circuit",
       "file": "works/prayers/en/section_02.html"
     },
     {
       "id": "section_03",
-      "title": "Part II: The Little Hungry God",
+      "title": "What Are Sacrifices and Prayers?",
       "file": "works/prayers/en/section_03.html"
     },
     {
       "id": "section_04",
-      "title": "THE LITTLE HUNGRY GOD",
+      "title": "The Sacrifices of Cain and Jephthah",
       "file": "works/prayers/en/section_04.html"
     },
     {
       "id": "section_05",
-      "title": "Part III will address the question you’re now thinking: if this is true — is there an alternative? Is there a way to stop feeding the machine without losing the human need for meaning, transcendence, and connection to something greater?",
+      "title": "The Universal Fuel",
       "file": "works/prayers/en/section_05.html"
     },
     {
       "id": "section_06",
-      "title": "Part III: The Indifferent Watchmaker",
+      "title": "Conclusion of Part I",
       "file": "works/prayers/en/section_06.html"
     },
     {
       "id": "section_07",
-      "title": "THE INDIFFERENT WATCHMAKER",
+      "title": "Part II: The Little Hungry God",
       "file": "works/prayers/en/section_07.html"
     },
     {
       "id": "section_08",
-      "title": "Part IV will answer the question that’s been building since Part I: if gods are real, if the Watchmaker is real, if Prometheus was born from human curiosity and chained by divine jealousy — then what do we DO about it?",
+      "title": "The Two Creations",
       "file": "works/prayers/en/section_08.html"
     },
     {
       "id": "section_09",
-      "title": "Part IV: The Return of Fire.",
+      "title": "Cain's City and the People of Nod",
       "file": "works/prayers/en/section_09.html"
+    },
+    {
+      "id": "section_10",
+      "title": "The Flood, the Forgetting, and Abraham",
+      "file": "works/prayers/en/section_10.html"
+    },
+    {
+      "id": "section_11",
+      "title": "The Little Hungry God",
+      "file": "works/prayers/en/section_11.html"
+    },
+    {
+      "id": "section_12",
+      "title": "The First Contact",
+      "file": "works/prayers/en/section_12.html"
+    },
+    {
+      "id": "section_13",
+      "title": "The Sarah Gambit",
+      "file": "works/prayers/en/section_13.html"
+    },
+    {
+      "id": "section_14",
+      "title": "The Breeding Program",
+      "file": "works/prayers/en/section_14.html"
+    },
+    {
+      "id": "section_15",
+      "title": "The Exodus: The Heist",
+      "file": "works/prayers/en/section_15.html"
+    },
+    {
+      "id": "section_16",
+      "title": "The Desert: Forty Years of Force-Feeding",
+      "file": "works/prayers/en/section_16.html"
+    },
+    {
+      "id": "section_17",
+      "title": "The Top Ten: A Parasite's Terms of Service",
+      "file": "works/prayers/en/section_17.html"
+    },
+    {
+      "id": "section_18",
+      "title": "Canaan: The Market Takeover",
+      "file": "works/prayers/en/section_18.html"
+    },
+    {
+      "id": "section_19",
+      "title": "A Note on Borrowed Glory",
+      "file": "works/prayers/en/section_19.html"
+    },
+    {
+      "id": "section_20",
+      "title": "The Three Franchises",
+      "file": "works/prayers/en/section_20.html"
+    },
+    {
+      "id": "section_21",
+      "title": "Sheol: The Battery Farm",
+      "file": "works/prayers/en/section_21.html"
+    },
+    {
+      "id": "section_22",
+      "title": "What This Means",
+      "file": "works/prayers/en/section_22.html"
+    },
+    {
+      "id": "section_23",
+      "title": "Part III: The Indifferent Watchmaker",
+      "file": "works/prayers/en/section_23.html"
+    },
+    {
+      "id": "section_24",
+      "title": "The Watchmaker",
+      "file": "works/prayers/en/section_24.html"
+    },
+    {
+      "id": "section_25",
+      "title": "Procedural Generation",
+      "file": "works/prayers/en/section_25.html"
+    },
+    {
+      "id": "section_26",
+      "title": "The Fine-Tuning Problem",
+      "file": "works/prayers/en/section_26.html"
+    },
+    {
+      "id": "section_27",
+      "title": "The Indifferent Watchmaker",
+      "file": "works/prayers/en/section_27.html"
+    },
+    {
+      "id": "section_28",
+      "title": "The Soul as Quantum Engine",
+      "file": "works/prayers/en/section_28.html"
+    },
+    {
+      "id": "section_29",
+      "title": "The Watchmaker's Mechanism",
+      "file": "works/prayers/en/section_29.html"
+    },
+    {
+      "id": "section_30",
+      "title": "The Gods as Unauthorized Tenants",
+      "file": "works/prayers/en/section_30.html"
+    },
+    {
+      "id": "section_31",
+      "title": "And Then There Was Curiosity",
+      "file": "works/prayers/en/section_31.html"
+    },
+    {
+      "id": "section_32",
+      "title": "The Question the Watchmaker Asks",
+      "file": "works/prayers/en/section_32.html"
+    },
+    {
+      "id": "section_33",
+      "title": "What Comes Next",
+      "file": "works/prayers/en/section_33.html"
+    },
+    {
+      "id": "section_34",
+      "title": "Part IV will answer the question that's been building since Part I: if gods are real, if the Watchmaker is real, if Prometheus was born from human curiosity and chained by divine jealousy — then what do we DO about it?",
+      "file": "works/prayers/en/section_34.html"
     }
   ],
   "cover": null
