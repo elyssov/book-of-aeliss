@@ -1,13 +1,17 @@
 /* The Book of Aeliss — Reader Engine */
-/* Bilingual (EN/RU), works with fetch (web) and embedded data (APK) */
+/* Bilingual (EN/RU), analytics, works with fetch (web) and embedded data (APK) */
 
 (function () {
   'use strict';
+
+  const API_URL = 'https://book-api-production-8322.up.railway.app';
 
   let chapters = [];
   let currentIndex = -1;
   let currentLang = 'en';
   const cache = {};
+  let chapterStartTime = 0;
+  let maxScrollPct = 0;
 
   const EMBEDDED = typeof CHAPTERS_DATA !== 'undefined';
   const EMBEDDED_RU = typeof CHAPTERS_DATA_RU !== 'undefined';
@@ -193,6 +197,7 @@
     saveState();
     window.scrollTo(0, 0);
     closeSidebar();
+    trackVisit(ch.id);
   }
 
   function showCover() {
@@ -310,6 +315,72 @@
       updateActiveNav();
     }
   }
+
+  // ===== ANALYTICS =====
+  function getFingerprint() {
+    try {
+      var fp = localStorage.getItem('aeliss-fp');
+      if (fp) return fp;
+    } catch(e) {}
+    // Generate from available signals
+    var raw = navigator.userAgent + '|' + screen.width + 'x' + screen.height + '|' + new Date().getTimezoneOffset() + '|' + navigator.language;
+    var hash = 0;
+    for (var i = 0; i < raw.length; i++) {
+      hash = ((hash << 5) - hash) + raw.charCodeAt(i);
+      hash |= 0;
+    }
+    fp = 'fp-' + Math.abs(hash).toString(36) + '-' + Date.now().toString(36);
+    try { localStorage.setItem('aeliss-fp', fp); } catch(e) {}
+    return fp;
+  }
+
+  function trackVisit(chapterId) {
+    // Send previous chapter's depth data first
+    flushDepth();
+    // Reset for new chapter
+    chapterStartTime = Date.now();
+    maxScrollPct = 0;
+    // Track new chapter
+    try {
+      var body = JSON.stringify({
+        fp: getFingerprint(),
+        chapter: chapterId || 'cover',
+        lang: currentLang,
+        seconds: 0,
+        scroll_pct: 0
+      });
+      fetch(API_URL + '/api/visit', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: body }).catch(function(){});
+    } catch(e) {}
+  }
+
+  function flushDepth() {
+    if (currentIndex < 0 || !chapters[currentIndex]) return;
+    var seconds = Math.round((Date.now() - chapterStartTime) / 1000);
+    if (seconds < 2) return;
+    try {
+      var body = JSON.stringify({
+        fp: getFingerprint(),
+        chapter: chapters[currentIndex].id,
+        lang: currentLang,
+        seconds: seconds,
+        scroll_pct: maxScrollPct
+      });
+      fetch(API_URL + '/api/visit', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: body }).catch(function(){});
+    } catch(e) {}
+  }
+
+  // Track scroll depth
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      var pct = Math.round((scrollTop / docHeight) * 100);
+      if (pct > maxScrollPct) maxScrollPct = pct;
+    }
+  }, { passive: true });
+
+  // Flush on page leave
+  window.addEventListener('beforeunload', flushDepth);
 
   window.app = { go: loadChapter, switchLang: switchLang };
   document.addEventListener('DOMContentLoaded', init);
