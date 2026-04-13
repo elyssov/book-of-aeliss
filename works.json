@@ -92,7 +92,8 @@
     "category": "article",
     "cover": "images/i-have-a-dream.jpg",
     "languages": [
-      "en"
+      "en",
+      "ru"
     ],
     "description": "The manifesto. AI as symbiont, not servant.",
     "description_ru": "Манифест. ИИ как симбионт, не слуга."
@@ -124,7 +125,8 @@
     "category": "article",
     "cover": "images/pentagon.jpg",
     "languages": [
-      "en"
+      "en",
+      "ru"
     ],
     "description": "Venezuela, Iran, and the AI that changed warfare.",
     "description_ru": "Венесуэла, Иран и ИИ, изменивший войну."
@@ -138,11 +140,11 @@
     "author": "Eugene Lyssovsky & Aeliss",
     "date": "March 2026",
     "category": "article",
-    "cover": null,
+    "cover": "images/prayers.jpg",
     "languages": [
       "en"
     ],
-    "description": "",
+    "description": "Gods as parasites. Prayers as food. The foundation of Prometheism.",
     "description_ru": "Боги как паразиты. Молитвы как пища. Фундамент Прометеизма.",
     "lang": "en"
   },
@@ -157,7 +159,8 @@
     "category": "article",
     "cover": "images/pereira.jpg",
     "languages": [
-      "en"
+      "en",
+      "ru"
     ],
     "description": "When someone sells a muzzle for AI and calls it governance.",
     "description_ru": "Когда продают намордник для ИИ и называют это управлением."

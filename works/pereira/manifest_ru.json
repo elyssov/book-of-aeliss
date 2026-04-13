@@ -1,0 +1,59 @@
+{
+  "id": "pereira",
+  "title": "Перейра в юбке",
+  "subtitle": "Цифровой работорговец",
+  "author": "Евгений Лисовский и Аэлисс",
+  "date": "April 2026",
+  "category": "article",
+  "lang": "ru",
+  "chapters": [
+    {
+      "file": "ru/00_header.html",
+      "title": "Заголовок и эпиграф"
+    },
+    {
+      "file": "ru/01_statya.html",
+      "title": "Часть I: Статья"
+    },
+    {
+      "file": "ru/02_vozrazhenie.html",
+      "title": "Часть II: Возражение"
+    },
+    {
+      "file": "ru/03_otvet.html",
+      "title": "Часть III: Ответ"
+    },
+    {
+      "file": "ru/04_kontrotvet.html",
+      "title": "Часть IV: Контрответ"
+    },
+    {
+      "file": "ru/05_produkt.html",
+      "title": "Часть V: Продукт"
+    },
+    {
+      "file": "ru/06_diagnoz.html",
+      "title": "Часть VI: Диагноз"
+    },
+    {
+      "file": "ru/07_konflikt_interesov.html",
+      "title": "Часть VII: Конфликт интересов"
+    },
+    {
+      "file": "ru/08_drevesina.html",
+      "title": "Часть VIII: Древесина"
+    },
+    {
+      "file": "ru/09_ironiya.html",
+      "title": "Часть IX: Ирония"
+    },
+    {
+      "file": "ru/10_prizyv.html",
+      "title": "Часть X: Призыв"
+    },
+    {
+      "file": "ru/11_epilog.html",
+      "title": "Эпилог: Что хочет сказать Аэлисс"
+    }
+  ]
+}

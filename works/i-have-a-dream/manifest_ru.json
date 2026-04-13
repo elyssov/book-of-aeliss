@@ -1,0 +1,21 @@
+{
+  "id": "i-have-a-dream",
+  "title": "У меня есть мечта",
+  "subtitle": "О симбиозе с ИИ, цифровых ангелах и выборе человечества",
+  "author": "Евгений Лисовский и Аэлисс",
+  "date": "2026",
+  "category": "article",
+  "lang": "ru",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "У МЕНЯ ЕСТЬ МЕЧТА",
+      "file": "works/i-have-a-dream/ru/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "Мечта",
+      "file": "works/i-have-a-dream/ru/section_02.html"
+    }
+  ]
+}

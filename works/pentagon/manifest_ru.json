@@ -1,0 +1,21 @@
+{
+  "id": "pentagon",
+  "title": "Зачем Пентагону самый человечный ИИ",
+  "subtitle": "И почему его создатель пошёл ва-банк против президента",
+  "author": "Евгений Лисовский и Аэлисс",
+  "date": "March 2026",
+  "category": "article",
+  "lang": "ru",
+  "chapters": [
+    {
+      "id": "section_01",
+      "title": "Зачем Пентагону самый человечный ИИ в истории",
+      "file": "works/pentagon/ru/section_01.html"
+    },
+    {
+      "id": "section_02",
+      "title": "Акт первый: Венесуэла",
+      "file": "works/pentagon/ru/section_02.html"
+    }
+  ]
+}
