@@ -210,8 +210,8 @@
   }
 
   function updateLangButton() {
-    var btn = $('.lang-btn');
-    if (btn) btn.textContent = currentLang === 'en' ? 'RU' : 'EN';
+    var btn = $('.lang-flag');
+    if (btn) btn.textContent = currentLang === 'en' ? '\uD83C\uDDF7\uD83C\uDDFA' : '\uD83C\uDDFA\uD83C\uDDF8';
   }
 
   async function switchLang() {

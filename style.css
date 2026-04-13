@@ -490,11 +490,28 @@ body {
 }
 
 .lang-btn {
-  width: auto;
-  padding: 0 8px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-left: 4px;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transition: all var(--transition);
+  padding: 0;
+}
+
+.lang-btn:hover {
+  background: var(--accent-glow);
+  transform: scale(1.1);
+}
+
+.lang-flag {
+  font-size: 1.4rem;
+  line-height: 1;
 }
 
 .font-label {
